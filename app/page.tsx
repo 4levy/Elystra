@@ -64,7 +64,6 @@ const StatusIndicator = ({ status }: { status: string }) => {
         }
       };
       ws.onclose = () => {
-        // Try to reconnect after a delay
         setTimeout(connect, 5000);
       };
     }
@@ -145,7 +144,7 @@ export default function AboutPage() {
         id: "874898422233178142",
         role: "Lead Developer",
         description:
-          "Responsible for application architecture and frontend development. Experienced in React, Next.js, and TypeScript.",
+          "Put smth later...",
       }
     ],
     []
