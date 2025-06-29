@@ -1,0 +1,52 @@
+@import url('https://fonts.cdnfonts.com/css/proggy-clean');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Proggy Clean Local';
+  src: url('/font/ProggyClean.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --foreground: #171717;
+  --font-proggy: 'Proggy Clean Local', 'Proggy Clean', 'Fira Mono', 'Consolas', 'Menlo', 'monospace';
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-proggy);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+  }
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-proggy), Arial, Helvetica, sans-serif !important;
+  height: 100vh;
+  overflow: auto;
+  /* Hide scrollbar but allow scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+code, pre, .font-mono, .proggy {
+  font-family: var(--font-proggy) !important;
+}
